@@ -4,5 +4,6 @@ from django.db import models
 
 class Goal(models.Model):
     title = models.CharField(max_length=100)
-   user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
-  
+    user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+
+
