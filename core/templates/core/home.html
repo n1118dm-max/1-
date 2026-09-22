@@ -1,18 +1,251 @@
-<!DOCTYPE html>
+"<!DOCTYPE html>
 <html lang="ja">
 <head>
-    {% load static %}
     <meta charset="UTF-8">
     <title>1%</title>
+
+    {% load static %}
     <link rel="stylesheet" href="{% static 'core/style.css' %}">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background: #f5fbfa;
+            color: #333;
+        }
+
+        /* 上部 */
+        header {
+            text-align: center;
+            padding: 25px 0 10px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .message {
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        /* メイン */
+        .container {
+            width: 90%;
+            max-width: 430px;
+            margin: 0 auto;
+            padding-bottom: 100px;
+        }
+
+        .next-step {
+            text-align: center;
+            color: #65bdb2;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        /* 目標カード */
+        .goal-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .goal-title {
+            background: #d8f1ee;
+            border-radius: 10px;
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .progress {
+            text-align: center;
+            color: #777;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        /* 今日の一歩 */
+        .step {
+            background: #e8f7f5;
+            border-radius: 10px;
+            padding: 18px;
+            margin-top: 18px;
+            text-align: center;
+        }
+
+        .step-title {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .step-text {
+            font-size: 17px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .difficulty {
+            display: inline-block;
+            background: #b9e8df;
+            color: #4b8f87;
+            border-radius: 20px;
+            padding: 6px 15px;
+            font-size: 13px;
+        }
+
+        /* できたボタン */
+        .complete-button {
+            width: 100%;
+            margin-top: 15px;
+            padding: 13px;
+            border: none;
+            border-radius: 10px;
+            background: #65c8bb;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* 別の目標 */
+        .switch-button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px;
+            background: white;
+            border: 1px solid #aaa;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+
+        /* 応援メッセージ */
+        .support {
+            background: #eaf6f7;
+            border-radius: 10px;
+            padding: 12px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* 下部メニュー */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            background: white;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-item {
+            text-align: center;
+            font-size: 12px;
+            color: #555;
+        }
+
+        .nav-icon {
+            display: block;
+            font-size: 25px;
+            margin-bottom: 3px;
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1>1%</h1>
-    <p>小さな一歩を毎日の習慣に</p>
+<header>
+    <h1 class="logo"><br>1%</h1>
+</header>
 
-    <h2>次の一歩</h2>
-    <p>ホーム画面</p>
+<main class="container">
+
+
+    <div class="message">
+        小さな一歩を毎日の習慣に 🌱
+    </div>
+
+    <div class="next-step">
+        次の一歩
+    </div>
+
+    <section class="goal-card">
+
+        <div class="goal-title">
+            📌 英語を話せるようになる
+        </div>
+
+        <div class="progress">
+            (1/5) 進捗中
+        </div>
+
+        <div class="step">
+
+            <div class="step-title">
+                今日の一歩
+            </div>
+
+            <div class="step-text">
+                朝に英単語を10個復習する
+            </div>
+
+            <div class="difficulty">
+                難易度 ★ 簡単
+            </div>
+
+        </div>
+
+        <button class="complete-button">
+            ✓ できた！
+        </button>
+
+    </section>
+
+    <button class="switch-button">
+        別の目標に切り替える
+    </button>
+
+    <div class="support">
+        💬 毎日が新しいチャレンジ。<br>
+        今日も一歩進もう 🌙
+    </div>
+
+</main>
+
+<nav class="bottom-nav">
+
+    <div class="nav-item">
+        <span class=""nav-icon"">⌂</span>
+        ホーム
+    </div>
+
+    <div class="nav-item">
+        <span class="nav-icon">＋</span>
+        追加
+    </div>
+
+    <div class="nav-item">
+        <span class="nav-icon">👤</span>
+        マイページ
+    </div>
+
+</nav>
 
 </body>
-</html>
+</html>"
